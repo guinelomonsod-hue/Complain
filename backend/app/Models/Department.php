@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Complaint;
 use Illuminate\Database\Eloquent\Model;
 
-class Priorities extends Model
+class Department extends Model
 {
-    protected $fillable = ['priority_name' , 'level'];
+    protected $fillable = ['department_name' , 'description'];
 
     public function complaints () {
         return $this->hasMany(Complaint::class);
